@@ -948,6 +948,7 @@ export class NetworkerThread {
 
         // console.log('Update', message)
         if (updatesProcessor) updatesProcessor(message, true)
+        this.emit('update', message);
         break
       }
     }
